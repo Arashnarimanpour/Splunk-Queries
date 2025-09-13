@@ -1,5 +1,5 @@
 # Measure the amount of downloads and uploads in firewall #
-indx=sophos
+``` indx=sophos
 | eval bytes_in=(bytes_in / (1024*1024)) 
 | eval bytes_out=(bytes_out / (1024*1024))
-| stats sum(bytes_in) AS download , sum(bytes_out) AS upload count by user_name
+| stats sum(bytes_in) AS download , sum(bytes_out) AS upload count by user_name ```
